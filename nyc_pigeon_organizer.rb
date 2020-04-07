@@ -21,17 +21,19 @@ end
 new_hash
 end
 =end
-pigeon_data = {
-  :color => {
-    :brown => ["Luca"],
-    :black => ["Lola"],
-  },
-  :gender => {
-    :male => ["Luca"],
-    :female => ["Lola"]
-  },
-  :lives => {
-    "Central Park" => ["Lola"],
-    "Library" => ["Luca"]
-  }
-}
+
+piogen_list = {}
+data.each do |key, value|
+  value.each do |describe, array|
+    array.each do |name|
+      if piogen_list.has_key?(name)
+        if piogen_list[name].has_key?(key)
+          piogen_list[name][key] << describe.to.s
+        else
+          piogen_list[name][key] = [describe.to_s]
+        end
+      end
+    end
+  end
+  piogen_list
+end
