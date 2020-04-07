@@ -30,7 +30,7 @@ end
 
 final = {}
   data.each do |first_level, all_levels|
-    all_other.each do |category, array|
+    all_levels.each do |category, array|
       array.each do |name|
         final[name] = {:color => [], :gender => [], :lives => []}
       end
