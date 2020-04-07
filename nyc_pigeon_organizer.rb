@@ -1,4 +1,5 @@
 def nyc_pigeon_organizer(data)
+=begin
 new_hash = {}
 data.each do |property, hash|
   hash.each do |attribute, array|
@@ -19,3 +20,18 @@ data.each do |property, hash|
 end
 new_hash
 end
+=end
+pigeon_data = {
+  :color => {
+    :brown => ["Luca"],
+    :black => ["Lola"],
+  },
+  :gender => {
+    :male => ["Luca"],
+    :female => ["Lola"]
+  },
+  :lives => {
+    "Central Park" => ["Lola"],
+    "Library" => ["Luca"]
+  }
+}
