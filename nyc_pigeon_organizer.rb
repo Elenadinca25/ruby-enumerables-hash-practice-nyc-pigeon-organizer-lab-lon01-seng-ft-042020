@@ -28,11 +28,11 @@ def nyc_pigeon_organizer(data)
 end
 =end
 
-final = {}
+new_hash = {}
   data.each do |first_level, all_levels|
     all_levels.each do |category, array|
       array.each do |name|
-        final[name] = {:color => [], :gender => [], :lives => []}
+        new_hash[name] = {:color => [], :gender => [], :lives => []}
       end
     end
   end
@@ -41,7 +41,7 @@ final = {}
     name.each do |bird_name|
       x.each do |item|
         if bird_name === item
-          final[item][:color] << bird_color.to_s
+          new_hash[item][:color] << bird_color.to_s
         end
       end
     end
@@ -50,7 +50,7 @@ final = {}
     type.each do |bird_name|
       x.each do |item|
         if bird_name === item
-          final[item][:gender] << gender.to_s
+          new_hash[item][:gender] << gender.to_s
         end
       end
     end
@@ -59,13 +59,13 @@ final = {}
     name.each do |bird_name|
       x.each do |item|
         if bird_name === item
-          final[item][:lives] << location
+          new_hash[item][:lives] << location
         end
       end
     end
   end
 
-  return final
+  return new_hash
 end
 
 
