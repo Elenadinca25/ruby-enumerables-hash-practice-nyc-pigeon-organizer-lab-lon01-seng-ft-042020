@@ -8,11 +8,11 @@ data.each do |key, value|
       end
 
       if !new_hash[name].has_key?(key)
-        new_hash[name][property] = []
+        new_hash[name][key] = []
       end
 
-      if !new_hash[name][property].include?(describe)
-        new_hash[name][property] << describe.to_s
+      if !new_hash[name][key].include?(describe)
+        new_hash[name][key] << describe.to_s
       end
     end
   end
