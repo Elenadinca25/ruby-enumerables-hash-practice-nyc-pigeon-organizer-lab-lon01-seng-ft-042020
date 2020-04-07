@@ -30,6 +30,9 @@ data.each do |key, value|
         if piogen_list[name].has_key?(key)
           piogen_list[name][key] << describe.to.s
         else
+            pigeon_list[name][key] = [describe.to_s]
+          end
+          else
           piogen_list[name] = {key => [describe.to_s]}
         end
       end
