@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   pigeon_hash = {}
 
   data.each do |attribute, items|
-    items.each do |feature, arr|
+    items.each do |attribute, arr|
       arr.each do |name|
         my_array << name if !my_array.include?(name)
       end
