@@ -1,5 +1,5 @@
 def nyc_pigeon_organizer(data)
   @result = data
-    names.each { |n| (@result.keys).include?(n) }
+    data.each { |pair| p pair }
 end
   # write your code here!
